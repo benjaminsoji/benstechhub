@@ -1,21 +1,49 @@
-<section class="hero gradient-bg">
-  <h1>Contact</h1>
-  <p>Reach out for collaborations, questions, or feedback.</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Ben's Tech Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Ben's Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
+    </ul>
+  </nav>
 
-<section class="form-section" data-aos="fade-up">
-  <form action="https://formspree.io/f/your-form-id" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+  <header class="page-header" data-aos="fade-down">
+    <h1>📬 Contact</h1>
+    <p>Questions, feedback, or collaboration ideas? Let’s connect.</p>
+  </header>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="_replyto" required />
+  <main class="contact-container" data-aos="fade-up">
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required />
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
 
-<footer><p>© 2025 Ben's Tech Hub</p></footer>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Ben's Tech Hub</p>
+  </footer>
+</body>
+</html>
