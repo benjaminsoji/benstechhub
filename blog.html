@@ -1,23 +1,57 @@
-<section class="hero gradient-bg">
-  <h1>Blog</h1>
-  <p>Ideas, updates, and deep dives into tech topics.</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Ben's Tech Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Ben's Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
+    </ul>
+  </nav>
 
-<section class="grid-section" data-aos="fade-up">
-  <div class="grid">
-    <div class="card">
-      <h3>How I Build Modular Layouts</h3>
-      <p>Design principles and code snippets for scalable sites.</p>
-    </div>
-    <div class="card">
-      <h3>My Favorite Dev Tools</h3>
-      <p>A curated list of apps that boost productivity.</p>
-    </div>
-    <div class="card">
-      <h3>Branding with Neon Aesthetics</h3>
-      <p>Creating a visual identity that stands out.</p>
-    </div>
-  </div>
-</section>
+  <header class="page-header" data-aos="fade-down">
+    <h1>📝 Blog</h1>
+    <p>Insights, tutorials, and behind-the-scenes breakdowns</p>
+  </header>
 
-<footer><p>© 2025 Ben's Tech Hub</p></footer>
+  <main class="blog-container" data-aos="fade-up">
+    <article class="blog-post">
+      <h2>Building Modular Layouts with Flexbox</h2>
+      <p class="date">August 10, 2025</p>
+      <p>Flexbox makes it easy to create responsive, modular layouts. In this post, I break down how I use it across Ben's Tech Hub to maintain consistency and adaptability.</p>
+      <a href="posts/flexbox-modularity.html">Read more →</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>My Workflow for Tech Tutorials</h2>
+      <p class="date">August 5, 2025</p>
+      <p>From planning to publishing, here's how I structure my tutorial content to stay clear, engaging, and scalable.</p>
+      <a href="posts/tutorial-workflow.html">Read more →</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Designing with Neon: Aesthetic Choices</h2>
+      <p class="date">July 28, 2025</p>
+      <p>Why I lean into neon-inspired visuals and how it reflects the identity of Ben's Tech Hub.</p>
+      <a href="posts/neon-design.html">Read more →</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 Ben's Tech Hub</p>
+  </footer>
+</body>
+</html>
