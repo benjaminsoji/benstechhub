@@ -3,54 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ben's Tech Hub</title>
+  <title>Benjamin's Tech Hub</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Ben's Tech Hub</div>
+    <div class="logo">⚡ Benjamin.dev</div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="toolkit.html">Toolkit</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><button id="theme-toggle">🌗</button></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
+    <button id="theme-toggle">🌓</button>
   </nav>
 
-  <header class="hero" data-aos="fade-up">
-    <h1>Welcome to Ben's Tech Hub</h1>
-    <p>Explainers, shortcuts, and smart workflows</p>
+  <header class="hero">
+    <h1>Welcome to My Tech Space</h1>
+    <p>Explore tutorials, workflows, and futuristic design.</p>
   </header>
 
-  <section class="featured-videos" data-aos="fade-up">
-    <h2>🎬 Latest Videos</h2>
+  <section class="featured-videos">
+    <h2>🎬 Featured Videos</h2>
     <div class="video-row">
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" frameborder="0" allowfullscreen></iframe>
-        <p>Video 1</p>
+        <iframe src="https://www.youtube.com/embed/8jLOx1hD3_o" allowfullscreen></iframe>
+        <p>Intro to C++</p>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" frameborder="0" allowfullscreen></iframe>
-        <p>Video 2</p>
+        <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+        <p>JavaScript Basics</p>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" frameborder="0" allowfullscreen></iframe>
-        <p>Video 3</p>
+        <iframe src="https://www.youtube.com/embed/Ke90Tje7VS0" allowfullscreen></iframe>
+        <p>React Crash Course</p>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/kUMe1FH4CHE" allowfullscreen></iframe>
+        <p>HTML & CSS Tutorial</p>
       </div>
     </div>
-    <p><a href="videos.html">▶️ See All Videos</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Ben's Tech Hub</p>
+    <p>© 2025 Benjamin.dev — Built with 💻 and ☕</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+    });
+  </script>
 </body>
 </html>
