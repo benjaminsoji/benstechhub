@@ -3,69 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ben's Tech Hub — Videos</title>
+  <title>Videos | Ben's Tech Hub</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">Ben's Tech Hub</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="videos.html" class="active">Videos</a></li>
-      <li><a href="toolkit.html">Toolkit</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="blog.html">Blog</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
       <li><button id="theme-toggle">🌗</button></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero" data-aos="fade-up">
-    <h1>🎥 Video Gallery</h1>
-    <p>Explore tutorials, tips, and tech explainers</p>
+  <header class="page-header" data-aos="fade-down">
+    <h1>🎥 Videos</h1>
+    <p>Tutorials, explainers, and tech walkthroughs</p>
   </header>
 
-  <!-- Video Section -->
-  <section class="featured-videos" data-aos="fade-up">
-    <h2>🎬 Latest Uploads</h2>
+  <main class="video-gallery" data-aos="fade-up">
     <div class="video-row">
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" frameborder="0" allowfullscreen></iframe>
-        <p>Video 1</p>
+        <p>Intro to Modular Layouts</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" frameborder="0" allowfullscreen></iframe>
-        <p>Video 2</p>
+        <p>Workflow Automation Demo</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" frameborder="0" allowfullscreen></iframe>
-        <p>Video 3</p>
+        <p>Neon UI Styling Tips</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" frameborder="0" allowfullscreen></iframe>
-        <p>Video 4</p>
+        <p>Responsive Design Walkthrough</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" frameborder="0" allowfullscreen></iframe>
-        <p>Video 5</p>
+        <p>Toolkit Setup Guide</p>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop">↑ Top</button>
-
-  <!-- Footer -->
   <footer>
     <p>© 2025 Ben's Tech Hub</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
