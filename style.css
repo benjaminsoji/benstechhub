@@ -1,35 +1,72 @@
-/* style.css */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  font-family: 'Orbitron', sans-serif;
+  background: #0f0f0f;
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
   text-align: center;
 }
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 2rem 1rem;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #00ffe7;
 }
 
-.video {
-  margin: 2rem auto;
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.video h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #ff4081;
+}
+
+.video-frame iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffe7;
 }
 
 .subscribe button {
-  background: #cc0000;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  background: #ff0000;
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  border-radius: 30px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.subscribe button:hover {
+  transform: scale(1.05);
+  background: #cc0000;
 }
 
 footer {
-  margin-top: 2rem;
-  padding: 1rem;
-  background: #eee;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.links a {
+  margin: 0 1rem;
+  color: #00ffe7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #ff4081;
 }
