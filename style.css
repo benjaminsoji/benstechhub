@@ -98,32 +98,37 @@ button:hover {
   color: #aaa;
 }
 
-/* === Grid Sections === */
-.grid-section {
-  padding: 3rem 2rem;
+/* === Page Containers === */
+.blog-container,
+.projects-container,
+.demo-container,
+.contact-container,
+.toolkit-container,
+.video-gallery {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
+/* === Cards & Posts === */
 .card,
 .project-card,
 .tool-card,
-.blog-post {
+.blog-post,
+.demo-block {
   background-color: #1a1a1a;
   border: 1px solid #333;
   padding: 1.5rem;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .card:hover,
 .project-card:hover,
 .tool-card:hover,
-.blog-post:hover {
+.blog-post:hover,
+.demo-block:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px #00ffff40;
 }
@@ -131,7 +136,8 @@ button:hover {
 .card h3,
 .project-card h2,
 .tool-card h2,
-.blog-post h2 {
+.blog-post h2,
+.demo-block h2 {
   margin-bottom: 0.5rem;
   color: #00ffff;
 }
@@ -139,7 +145,8 @@ button:hover {
 .card p,
 .project-card p,
 .tool-card p,
-.blog-post p {
+.blog-post p,
+.demo-block p {
   color: #ccc;
 }
 
@@ -174,14 +181,6 @@ button:hover {
 }
 
 /* === Demo Blocks === */
-.demo-block {
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  max-width: 800px;
-}
-
 .neon-button {
   background: transparent;
   border: 2px solid #00ffff;
@@ -211,14 +210,11 @@ button:hover {
 }
 
 /* === Video Gallery === */
-.video-gallery {
-  padding: 2rem;
-  overflow-x: auto;
-}
-
 .video-row {
   display: flex;
   gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .video-item {
