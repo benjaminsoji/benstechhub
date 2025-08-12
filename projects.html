@@ -1,24 +1,54 @@
-<!-- Same head/nav as above -->
-<section class="hero gradient-bg">
-  <h1>Projects</h1>
-  <p>Personal builds, collaborations, and experiments in tech.</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Ben's Tech Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Ben's Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
+    </ul>
+  </nav>
 
-<section class="grid-section" data-aos="fade-up">
-  <div class="grid">
-    <div class="card">
-      <h3>Modular Website</h3>
-      <p>Built with reusable components and futuristic design.</p>
-    </div>
-    <div class="card">
-      <h3>Workflow Tutorials</h3>
-      <p>Step-by-step guides for creators and developers.</p>
-    </div>
-    <div class="card">
-      <h3>Neon UI Kit</h3>
-      <p>Custom components for glowing, responsive layouts.</p>
-    </div>
-  </div>
-</section>
+  <header class="page-header" data-aos="fade-down">
+    <h1>🧪 Projects</h1>
+    <p>Featured builds, experiments, and tutorials</p>
+  </header>
 
-<footer><p>© 2025 Ben's Tech Hub</p></footer>
+  <main class="projects-container" data-aos="fade-up">
+    <div class="project-card">
+      <h2>Modular Portfolio Layout</h2>
+      <p>A responsive, component-based layout built with Flexbox and CSS Grid. Designed to scale across devices and content types.</p>
+      <a href="projects/modular-layout.html">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Neon UI Theme Pack</h2>
+      <p>A custom CSS theme inspired by neon aesthetics. Includes buttons, cards, and navigation elements with glowing effects.</p>
+      <a href="projects/neon-ui.html">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Workflow Automation Demo</h2>
+      <p>A showcase of how I automate repetitive tasks using shell scripts, VS Code tasks, and Git hooks.</p>
+      <a href="projects/workflow-demo.html">View Project →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Ben's Tech Hub</p>
+  </footer>
+</body>
+</html>
