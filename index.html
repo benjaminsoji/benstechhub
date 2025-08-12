@@ -5,38 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ben's Tech Hub</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Ben's Tech Hub</h1>
-      <p>Smart workflows, shortcuts, and explainers</p>
-    </header>
+  <nav class="navbar">
+    <div class="logo">Ben's Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
+    </ul>
+  </nav>
 
-    <section class="video">
-      <h2>🎥 Latest Upload</h2>
-      <div class="video-frame">
-        <iframe src="https://youtu.be/Zb9Nk1inj0s"></iframe>
-          title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+  <header class="hero" data-aos="fade-up">
+    <h1>Welcome to Ben's Tech Hub</h1>
+    <p>Explainers, shortcuts, and smart workflows</p>
+  </header>
 
-    <section class="subscribe">
-      <a href="http://www.youtube.com/@BensTechHub" target="_blank">
-        <button>🔔 Subscribe</button>
-      </a>
-    </section>
+  <section class="featured" data-aos="fade-up">
+    <h2>Featured Video</h2>
+    <iframe src="https://www.youtube.com/embed/Zb9Nk1inj0s" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-    <footer>
-      <p>Connect with me:</p>
-      <div class="links">
-        <a href="mailto:your@email.com">📧 Email</a>
-        <a href="https://www.instagram.com/yourhandle" target="_blank">📸 Instagram</a>
-        <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a>
-      </div>
-    </footer>
-  </div>
+  <footer>
+    <p>© 2025 Ben's Tech Hub</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
