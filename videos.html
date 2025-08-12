@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navbar (shared across all pages) -->
   <nav class="navbar">
     <div class="logo">⚡ Ben's Tech Hub</div>
     <ul class="nav-links">
@@ -16,13 +16,16 @@
       <li><a href="video.html" class="active">Videos</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="tools.html">Tools</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <header class="hero">
     <h1>🎥 Video Gallery</h1>
-    <p>Tech tips, tutorials, and explainers — all in one place</p>
+    <p>Explore tech tutorials and explainers</p>
   </header>
 
   <!-- Horizontal Video Section -->
@@ -30,30 +33,39 @@
     <div class="video-scroll">
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" allowfullscreen></iframe>
-        <p>Intro to Mac Shortcuts</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" allowfullscreen></iframe>
-        <p>Workflow Automation Basics</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" allowfullscreen></iframe>
-        <p>Ergonomic Setup Tips</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" allowfullscreen></iframe>
-        <p>Modular Coding Explained</p>
       </div>
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" allowfullscreen></iframe>
-        <p>Tech for Students</p>
       </div>
     </div>
   </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Top</button>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Ben's Tech Hub — All rights reserved</p>
   </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
