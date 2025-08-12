@@ -3,48 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Ben's Tech Hub</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Toolkit | Ben's Tech Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="toolkit.html">Toolkit</a>
-      <a href="contact.html">Contact</a>
-      <button id="theme-toggle">🌙</button>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">Ben's Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="toolkit.html" class="active">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
+    </ul>
+  </nav>
+
+  <header class="page-header" data-aos="fade-down">
+    <h1>🧰 Toolkit</h1>
+    <p>My go-to tools, libraries, and resources</p>
   </header>
 
-  <!-- Hero -->
-  <section class="hero gradient-bg">
-    <h1>Blog</h1>
-    <p>Ideas, updates, and deep dives into tech topics.</p>
-  </section>
-
-  <!-- Blog Grid -->
-  <section class="grid-section" data-aos="fade-up">
-    <div class="grid">
-      <div class="card" data-aos="fade-up">
-        <h3>How I Build Modular Layouts</h3>
-        <p>Design principles and code snippets for scalable sites.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3>My Favorite Dev Tools</h3>
-        <p>A curated list of apps that boost productivity.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Branding with Neon Aesthetics</h3>
-        <p>Creating a visual identity that stands out.</p>
-      </div>
+  <main class="toolkit-container" data-aos="fade-up">
+    <div class="tool-card">
+      <h2>VS Code</h2>
+      <p>My primary code editor. Fast, extensible, and perfect for web development.</p>
+      <a href="https://code.visualstudio.com/" target="_blank">Visit Site →</a>
     </div>
-  </section>
 
-  <!-- Footer -->
+    <div class="tool-card">
+      <h2>Figma</h2>
+      <p>Used for UI design and prototyping. Great for planning layouts and visual consistency.</p>
+      <a href="https://figma.com/" target="_blank">Visit Site →</a>
+    </div>
+
+    <div class="tool-card">
+      <h2>Git & GitHub</h2>
+      <p>Version control and collaboration. Every project lives here.</p>
+      <a href="https://github.com/" target="_blank">Visit Site →</a>
+    </div>
+
+    <div class="tool-card">
+      <h2>AOS (Animate On Scroll)</h2>
+      <p>Lightweight scroll animations to enhance user experience.</p>
+      <a href="https://michalsnik.github.io/aos/" target="_blank">Visit Site →</a>
+    </div>
+
+    <div class="tool-card">
+      <h2>Neon CSS Snippets</h2>
+      <p>Custom glow effects and transitions for futuristic UI elements.</p>
+      <a href="projects/neon-ui.html">View Project →</a>
+    </div>
+  </main>
+
   <footer>
     <p>© 2025 Ben's Tech Hub</p>
   </footer>
