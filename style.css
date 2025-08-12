@@ -1,0 +1,35 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.video {
+  margin: 2rem auto;
+}
+
+.subscribe button {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #eee;
+}
