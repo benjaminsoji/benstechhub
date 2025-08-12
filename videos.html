@@ -5,46 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ben's Tech Hub — Videos</title>
   <link rel="stylesheet" href="video.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">⚡ Ben's Tech Hub</div>
+    <div class="logo">Ben's Tech Hub</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="video.html" class="active">Videos</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
       <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌗</button></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
+  <header class="hero" data-aos="fade-up">
     <h1>🎥 Video Gallery</h1>
     <p>Explore tutorials, tips, and tech explainers</p>
   </header>
 
   <!-- Horizontal Video Section -->
-  <section class="video-gallery">
+  <section class="video-gallery" data-aos="fade-up">
     <h2>Latest Uploads</h2>
     <div class="video-scroll">
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -54,18 +56,11 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Ben's Tech Hub — All rights reserved</p>
+    <p>© 2025 Ben's Tech Hub</p>
   </footer>
 
-  <!-- Script -->
-  <script>
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
