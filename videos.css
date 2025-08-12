@@ -1,4 +1,4 @@
-/* === Theme & Base === */
+/* === Base Theme === */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -47,12 +47,13 @@ a {
   transition: background 0.2s;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
   background-color: #00ffe7;
   color: #0f0f0f;
 }
 
-/* === Hero === */
+/* === Hero Section === */
 .hero {
   text-align: center;
   padding: 3rem 2rem;
@@ -60,7 +61,7 @@ a {
   box-shadow: 0 0 20px #00ffe7;
 }
 
-/* === Video Gallery — Horizontal Scroll === */
+/* === Video Gallery === */
 .video-gallery {
   padding: 2rem;
   text-align: center;
