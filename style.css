@@ -1,72 +1,66 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: #0f0f0f;
-  color: #f0f0f0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --bg: #0f0f0f;
+  --text: #f0f0f0;
+  --accent: #00ffe7;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #00ffe7;
+.light-theme {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #0077ff;
 }
 
-header p {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
   font-size: 1.2rem;
-  color: #ccc;
+  cursor: pointer;
+  color: var(--accent);
 }
 
-.video h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  color: #ff4081;
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
 }
 
-.video-frame iframe {
+.featured iframe {
   width: 100%;
   max-width: 560px;
   height: 315px;
   border-radius: 10px;
-  box-shadow: 0 0 20px #00ffe7;
-}
-
-.subscribe button {
-  margin-top: 1.5rem;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  background: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.subscribe button:hover {
-  transform: scale(1.05);
-  background: #cc0000;
+  box-shadow: 0 0 20px var(--accent);
 }
 
 footer {
-  margin-top: 3rem;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-.links a {
-  margin: 0 1rem;
-  color: #00ffe7;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.links a:hover {
-  color: #ff4081;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--accent);
 }
