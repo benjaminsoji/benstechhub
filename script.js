@@ -1,13 +1,24 @@
-// Theme toggle with localStorage
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('light-theme');
-  localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  body.classList.add(savedTheme);
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light');
+  const currentTheme = body.classList.contains('light') ? 'light' : '';
+  localStorage.setItem('theme', currentTheme);
 });
 
-// Apply saved theme + initialize AOS
-window.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-theme');
-  }
-  AOS.init();
+// AOS Initialization
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
 });
