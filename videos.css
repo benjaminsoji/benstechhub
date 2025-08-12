@@ -1,18 +1,36 @@
-/* === Base Theme === */
+/* === Theme Variables === */
+:root {
+  --bg: #0f0f0f;
+  --text: #f0f0f0;
+  --accent: #00ffe7;
+}
+
+.light-theme {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #0077ff;
+}
+
+/* === Global Styles === */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: #f0f0f0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-h1, h2 {
-  color: #00ffe7;
+h1, h2, h3 {
+  color: var(--accent);
 }
 
 a {
-  color: #00ffe7;
+  color: var(--accent);
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
 }
 
 /* === Navbar === */
@@ -21,15 +39,15 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #0f0f0f;
-  border-bottom: 1px solid #00ffe7;
+  background: var(--bg);
+  border-bottom: 1px solid var(--accent);
   flex-wrap: wrap;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00ffe7;
+  color: var(--accent);
 }
 
 .nav-links {
@@ -41,26 +59,40 @@ a {
   flex-wrap: wrap;
 }
 
-.nav-links li a {
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   padding: 0.5rem 0.75rem;
   border-radius: 5px;
   transition: background 0.2s;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  background-color: #00ffe7;
-  color: #0f0f0f;
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent);
 }
 
 /* === Hero Section === */
 .hero {
   text-align: center;
-  padding: 3rem 2rem;
-  box-shadow: 0 0 20px #00ffe7;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg), #1a1a1a);
+  box-shadow: 0 0 20px var(--accent);
 }
 
-/* === Video Gallery === */
+/* === Video Gallery (Horizontal Scroll) === */
 .video-gallery {
   padding: 2rem;
   text-align: center;
@@ -80,7 +112,7 @@ a {
 }
 
 .video-scroll::-webkit-scrollbar-thumb {
-  background: #00ffe7;
+  background: var(--accent);
   border-radius: 4px;
 }
 
@@ -94,7 +126,7 @@ a {
   width: 100%;
   height: 180px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00ffe7;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 /* === Back to Top Button === */
@@ -102,15 +134,15 @@ a {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #00ffe7;
-  color: #0f0f0f;
+  background-color: var(--accent);
+  color: var(--bg);
   border: none;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
   display: none;
-  box-shadow: 0 0 10px #00ffe7;
+  box-shadow: 0 0 10px var(--accent);
   transition: opacity 0.3s ease;
 }
 
@@ -123,6 +155,18 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  color: #00ffe7;
-  border-top: 1px solid #00ffe7;
+  color: var(--accent);
+  border-top: 1px solid var(--accent);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .video-item iframe {
+    height: 160px;
+  }
 }
