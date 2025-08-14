@@ -1,3 +1,12 @@
+/* === Base Styles & Variables === */
+:root {
+  --accent: #00ffff;
+  --card-bg: #111;
+  --text: #ccc;
+  --neon-glow: #00ffff;
+}
+
+/* === Light Theme === */
 body.light {
   background: #f5f5f5;
   color: #222;
@@ -9,15 +18,19 @@ body.light footer {
   box-shadow: 0 0 10px #ccc;
 }
 
-body.light .video-gallery {
-  background-color: #fff;
+body.light .neon-btn {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 8px #222;
 }
 
-body.light .video-item iframe {
-  border-color: #222;
-  box-shadow: 0 0 10px #222;
+body.light .demo-card,
+body.light .blog-post,
+body.light .modal-content {
+  background: #fff;
+  box-shadow: 0 0 12px #ccc;
 }
 
-body.light .video-item p {
+body.light .read-more {
   color: #222;
 }
