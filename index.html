@@ -17,6 +17,7 @@
         <li><a href="videos.html">Videos</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
       </ul>
     </nav>
   </header>
@@ -53,5 +54,22 @@
   <footer>
     <p>&copy; 2025 Ben's Tech Hub</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggle.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
