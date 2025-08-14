@@ -1,41 +1,41 @@
-/* Blog Post Styles */
-.blog-container {
-  max-width: 900px;
-  margin: 0 auto;
+/* blog.css */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   padding: 2rem;
-  background: #0a0a0a;
-  border-left: 4px solid #ff00ff;
 }
 
 .blog-post {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #333;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px var(--neon-glow);
+  transition: transform 0.2s;
 }
 
-.blog-title {
-  font-size: 2rem;
-  color: #00ffff;
-  margin-bottom: 0.5rem;
+.blog-post:hover {
+  transform: translateY(-5px);
 }
 
-.blog-meta {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 1rem;
+.blog-post h3 {
+  margin-top: 0;
+  color: var(--accent);
 }
 
-.blog-content {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
+.blog-post p {
+  margin: 1rem 0;
+  color: var(--text);
 }
 
-.blog-content a {
-  color: #ff00ff;
+.read-more {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.read-more:hover {
   text-decoration: underline;
-}
-
-.blog-content a:hover {
-  color: #00ffff;
 }
