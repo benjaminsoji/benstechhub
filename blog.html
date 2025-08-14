@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Ben’s Tech Hub</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
   <header>
@@ -24,25 +26,28 @@
     <h2>Tech Blog</h2>
     <p>Read insights, updates, and behind-the-scenes stories.</p>
 
-    <section class="blog-grid">
-      <article class="blog-post" data-aos="fade-up">
-        <h3>Modular CSS: Why It Matters</h3>
-        <p>Learn how breaking your styles into reusable modules can future-proof your site and simplify maintenance.</p>
-        <a href="#" class="read-more">Read More →</a>
-      </article>
-
-      <article class="blog-post" data-aos="fade-up" data-aos-delay="100">
-        <h3>Neon UI: Designing with Glow</h3>
-        <p>Explore how neon-inspired design can elevate your brand and create a memorable user experience.</p>
-        <a href="#" class="read-more">Read More →</a>
-      </article>
-
-      <article class="blog-post" data-aos="fade-up" data-aos-delay="200">
-        <h3>Behind the Scenes: Ben’s Tech Hub</h3>
-        <p>A look at the architecture, tools, and mindset behind building this modular, glowing digital space.</p>
-        <a href="#" class="read-more">Read More →</a>
-      </article>
+    <!-- Filter Controls -->
+    <section class="blog-controls">
+      <input type="text" id="searchInput" placeholder="Search blog..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="css">CSS</option>
+        <option value="design">Design</option>
+        <option value="workflow">Workflow</option>
+      </select>
     </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-grid" id="blogGrid">
+      <!-- Posts will be injected here -->
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button id="prevPage">← Previous</button>
+      <span id="pageIndicator">Page 1</span>
+      <button id="nextPage">Next →</button>
+    </div>
   </main>
 
   <footer>
@@ -50,5 +55,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="blog.js"></script>
 </body>
 </html>
