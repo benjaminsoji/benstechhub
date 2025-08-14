@@ -10,3 +10,9 @@
 #theme-toggle:hover {
   transform: scale(1.2);
 }
+
+@media (max-width: 600px) {
+  .nav-left .logo img {
+    height: 32px;
+  }
+}
