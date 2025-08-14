@@ -1,6 +1,5 @@
 /* === Video Gallery === */
 .video-gallery {
-  padding: 2rem;
   background-color: var(--background);
 }
 
@@ -8,6 +7,7 @@
   color: var(--accent);
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .video-row {
