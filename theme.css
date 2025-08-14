@@ -1,0 +1,28 @@
+/* theme.css */
+body.light {
+  background: #f5f5f5;
+  color: #222;
+}
+
+body.light header,
+body.light footer {
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+}
+
+body.light .neon-btn {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 8px #222;
+}
+
+body.light .demo-card,
+body.light .blog-post,
+body.light .modal-content {
+  background: #fff;
+  box-shadow: 0 0 12px #ccc;
+}
+
+body.light .read-more {
+  color: #222;
+}
