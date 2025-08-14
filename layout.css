@@ -1,0 +1,27 @@
+/* layout.css */
+header {
+  background: #111;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px var(--neon-glow);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  box-shadow: 0 0 10px var(--neon-glow);
+}
