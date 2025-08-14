@@ -1,18 +1,130 @@
-#theme-toggle {
-  background: none;
+/* === Components === */
+.neon-btn {
+  background: var(--accent);
+  color: #fff;
   border: none;
-  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0 0 8px var(--accent);
+  transition: transform 0.2s;
+}
+
+.neon-btn:hover {
+  transform: scale(1.05);
+}
+
+.demo-grid,
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.demo-card,
+.blog-post {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px var(--neon-glow);
+  transition: transform 0.2s;
+}
+
+.demo-card:hover,
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.read-more {
   color: var(--accent);
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#theme-toggle:hover {
-  transform: scale(1.2);
+.read-more:hover {
+  text-decoration: underline;
 }
 
+/* === Modal === */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--neon-glow);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* === Video Gallery === */
+.video-gallery {
+  background-color: #000;
+}
+
+.video-gallery h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.video-row {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.video-item {
+  flex: 0 0 auto;
+  width: 320px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 180px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.video-item p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* === Responsive Video Height === */
 @media (max-width: 600px) {
-  .nav-left .logo img {
-    height: 32px;
+  .video-item iframe {
+    height: 160px;
   }
 }
