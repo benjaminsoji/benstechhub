@@ -9,11 +9,20 @@ if (savedTheme) {
 }
 
 // Toggle theme
-themeToggle.addEventListener('click', () => {
+themeToggle?.addEventListener('click', () => {
   body.classList.toggle('light');
   const currentTheme = body.classList.contains('light') ? 'light' : '';
   localStorage.setItem('theme', currentTheme);
 });
+
+// Modal logic
+function openModal() {
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
 
 // AOS Initialization
 document.addEventListener('DOMContentLoaded', () => {
