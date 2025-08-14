@@ -4,32 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Ben’s Tech Hub</title>
-
-  <!-- Core Styles -->
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/theme.css" />
-
-  <!-- Page-Specific Styles -->
-  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Ben’s Tech Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="demo.html">Demo</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="logo">Ben’s Tech Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
   </header>
 
-  <main>
-    <h2>Welcome to Ben’s Tech Hub</h2>
+  <section class="hero">
+    <h1>Welcome to Ben’s Tech Hub</h1>
     <p>Your go-to space for tutorials, demos, and tech insights.</p>
-  </main>
+  </section>
+
+  <section class="video-gallery">
+    <h2>Featured Videos</h2>
+    <div class="video-row">
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <p>Intro to Modular CSS</p>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/3fumBcKC6RE" allowfullscreen></iframe>
+        <p>Dark Mode Toggle Tutorial</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Ben’s Tech Hub. All rights reserved.</p>
