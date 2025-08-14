@@ -1,28 +1,107 @@
+/* ================================
+   🌗 Theme Variables
+================================ */
+
 :root {
   --accent: #00ffff;
-  --card-bg: #111;
   --text: #ccc;
+  --background: #000;
+  --card-bg: #111;
   --neon-glow: #00ffff;
+  --link-hover: #0ff;
+  --shadow: 0 0 10px var(--neon-glow);
 }
 
 body.light {
-  background-color: #f5f5f5;
-  color: #222;
+  --accent: #222;
+  --text: #222;
+  --background: #f5f5f5;
+  --card-bg: #fff;
+  --neon-glow: #ccc;
+  --link-hover: #555;
+  --shadow: 0 0 10px #ccc;
 }
 
-body.light nav {
-  background-color: #fff;
-  box-shadow: 0 0 10px #ccc;
+/* ================================
+   🧱 Base Theme Styles
+================================ */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.light .nav-links a {
-  color: #222;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-body.light #theme-toggle {
-  color: #222;
+a:hover {
+  color: var(--link-hover);
 }
 
-body.light .logo img {
-  filter: drop-shadow(0 0 5px #ccc);
+/* ================================
+   🧭 Navbar Theme Styling
+================================ */
+
+nav {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  color: var(--accent);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ================================
+   🔆 Logo Styling
+================================ */
+
+.logo img {
+  filter: drop-shadow(0 0 5px var(--neon-glow));
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================
+   🎥 Video Component Theme
+================================ */
+
+.video-item iframe {
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.video-item p {
+  color: var(--text);
+}
+
+/* ================================
+   🧩 Utility Classes
+================================ */
+
+.glow {
+  text-shadow: 0 0 5px var(--neon-glow), 0 0 10px var(--neon-glow);
+}
+
+.card {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
