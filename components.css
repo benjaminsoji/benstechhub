@@ -15,7 +15,8 @@
   transform: scale(1.05);
 }
 
-.demo-card, .blog-post {
+.demo-card,
+.blog-post {
   background: var(--card-bg);
   border-radius: 8px;
   padding: 1.5rem;
@@ -23,7 +24,8 @@
   transition: transform 0.2s;
 }
 
-.demo-card:hover, .blog-post:hover {
+.demo-card:hover,
+.blog-post:hover {
   transform: translateY(-5px);
 }
 
