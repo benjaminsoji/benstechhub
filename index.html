@@ -3,77 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ben's Tech Hub</title>
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="layout.css" />
-  <link rel="stylesheet" href="components.css" />
-  <link rel="stylesheet" href="theme.css" />
+  <title>Ben's Neon Brand</title>
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-left">
-        <a href="index.html" class="logo" title="Go to homepage">
-          <img src="zxPv9V6aW4DLhASxAWoU6.png" alt="Ben's Logo" />
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
-      </ul>
-    </nav>
-  </header>
+<body class="dark">
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Ben's Logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+    <button id="theme-toggle">🌙</button>
+  </nav>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to Ben's Tech Hub</h1>
-        <p>Explore tutorials, workflows, and modular design magic.</p>
+    <section class="video-row">
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+        <p>Video Title 1</p>
       </div>
-    </section>
-
-    <section class="video-gallery">
-      <div class="container">
-        <h2>Latest Tutorials</h2>
-        <div class="video-row">
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" allowfullscreen></iframe>
-            <p>Video 1</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" allowfullscreen></iframe>
-            <p>Video 2</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/Zb9Nk1inj0s" allowfullscreen></iframe>
-            <p>Video 3</p>
-          </div>
-        </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+        <p>Video Title 2</p>
       </div>
+      <!-- Add more video-item blocks as needed -->
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ben's Tech Hub</p>
-  </footer>
-
   <script>
     const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light');
-      toggle.textContent = '☀️';
-    }
-
     toggle.addEventListener('click', () => {
-      body.classList.toggle('light');
-      const isLight = body.classList.contains('light');
-      toggle.textContent = isLight ? '☀️' : '🌙';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      document.body.classList.toggle('light');
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
     });
   </script>
 </body>
