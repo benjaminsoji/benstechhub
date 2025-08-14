@@ -23,6 +23,31 @@
   <main>
     <h2>Live Demos</h2>
     <p>Try out interactive components and see them in action.</p>
+
+    <section class="demo-grid">
+      <div class="demo-card" data-aos="fade-up">
+        <h3>Neon Button</h3>
+        <button class="neon-btn">Click Me</button>
+      </div>
+
+      <div class="demo-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Modal Popup</h3>
+        <button class="neon-btn" onclick="openModal()">Open Modal</button>
+      </div>
+
+      <div class="demo-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Theme Toggle</h3>
+        <button id="theme-toggle" class="neon-btn">Toggle Theme</button>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>This is a demo modal popup!</p>
+      </div>
+    </div>
   </main>
 
   <footer>
