@@ -1,62 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ben's Neon Brand</title>
-  <!-- Link to consistent CSS files for styling -->
-  <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/components.css" />
-  <link rel="stylesheet" href="styles/theme.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's Tech Hub</title>
+    <!-- Use a modern, readable font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-  <!-- All visible content, including the navigation, must be inside the body tag -->
-  <nav>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/bilben.png" alt="Ben's Logo" />
-      </a>
+<body>
+    <!-- Main Website Content -->
+    <nav>
+        <div class="logo">
+            <img src="https://placehold.co/40x40/000000/00ffff?text=Ben" alt="Ben's Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#toolkit">Toolkit</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact" onclick="openModal()">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" data-aos="fade-in">
+            <div class="container">
+                <h1 class="glow">Welcome to Ben's Tech Hub</h1>
+                <p>A place where I share my journey in tech, projects, and insights.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" data-aos="fade-up">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <h3>Project 1</h3>
+                        <p>A cool project description goes here.</p>
+                        <a href="#">Learn More →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Project 2</h3>
+                        <p>Another awesome project description.</p>
+                        <a href="#">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit Section -->
+        <section id="toolkit" data-aos="fade-up">
+            <div class="container">
+                <h2>My Toolkit</h2>
+                <div class="toolkit-container">
+                    <div class="tool-card">
+                        <h3>Tool 1</h3>
+                        <p>This is a description of a tool I use.</p>
+                        <a href="#">View Tool →</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Tool 2</h3>
+                        <p>Description for another key tool.</p>
+                        <a href="#">View Tool →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" data-aos="fade-up">
+            <div class="container">
+                <h2>Blog</h2>
+                <div class="blog-controls">
+                    <input type="text" id="searchInput" placeholder="Search blog...">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="css">CSS</option>
+                        <option value="design">Design</option>
+                        <option value="workflow">Workflow</option>
+                    </select>
+                </div>
+                <div id="blogGrid" class="blog-grid">
+                    <!-- Blog posts will be injected here by JavaScript -->
+                </div>
+                <div class="pagination">
+                    <button id="prevPage">← Previous</button>
+                    <span id="pageIndicator">Page 1</span>
+                    <button id="nextPage">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section id="videos" data-aos="fade-up">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="video-row">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        <p>Video 1: A cool video about tech.</p>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        <p>Video 2: More tech insights.</p>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        <p>Video 3: My coding journey.</p>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        <p>Video 4: Fun with code.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Ben's Tech Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Contact Me</h2>
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email: contact@benstechhub.com</li>
+                <li>Twitter: @BenTechHub</li>
+            </ul>
+        </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="demo.html">Demo</a></li>
-      <li><a href="toolkit.html">Toolkit</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><button id="theme-toggle">🌙</button></li>
-    </ul>
-  </nav>
 
-  <main>
-    <!-- Use a heading to clearly title the section -->
-    <h2>Video Tutorials</h2>
-    <section class="video-row">
-      <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/uYPKXNuv4D8" allowfullscreen></iframe>
-        <p>Video Title 1</p>
-      </div>
-      <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/oA-TQiRsNu8" allowfullscreen></iframe>
-        <p>Video Title 2</p>
-      </div>
-    </section>
-  </main>
+    <!-- AOS JS for animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <footer>
-    <p>&copy; 2025 Ben’s Tech Hub. All rights reserved.</p>
-  </footer>
-
-  <!-- The script block is now properly structured and placed at the end of the body -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light');
-      document.body.classList.toggle('dark');
-      toggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
-    });
-  </script>
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
