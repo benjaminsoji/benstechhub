@@ -4,19 +4,19 @@ const blogPosts = [
     title: "Modular CSS: Why It Matters",
     category: "css",
     excerpt: "Learn how breaking your styles into reusable modules can future-proof your site.",
-    link: "post.html?id=1"
+    link: "#"
   },
   {
     title: "Neon UI: Designing with Glow",
     category: "design",
     excerpt: "Explore how neon-inspired design can elevate your brand.",
-    link: "post.html?id=2"
+    link: "#"
   },
   {
     title: "Behind the Scenes: Ben’s Tech Hub",
     category: "workflow",
     excerpt: "A look at the architecture, tools, and mindset behind this glowing space.",
-    link: "post.html?id=3"
+    link: "#"
   },
   // Add more posts as needed
 ];
@@ -121,7 +121,7 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
   body.classList.remove('light', 'dark');
   body.classList.add(savedTheme);
-  themeToggle.textContent = savedTheme === 'light' ? '☀️' : '�';
+  themeToggle.textContent = savedTheme === 'light' ? '☀️' : '🌙';
 }
 
 themeToggle?.addEventListener('click', () => {
@@ -150,4 +150,3 @@ document.addEventListener('DOMContentLoaded', () => {
     once: true,
   });
 });
-�
