@@ -4,33 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demo | Ben’s Tech Hub</title>
+  <!-- Link to external CSS files for styling -->
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="layout.css" />
   <link rel="stylesheet" href="components.css" />
   <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
+
+  <!-- The header now correctly contains a single, complete navigation bar -->
   <header>
     <h1>Ben’s Tech Hub</h1>
-   <nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/bilben.png" alt="Ben's Logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="toolkit.html">Toolkit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button id="theme-toggle">🌙</button></li>
-  </ul>
-</nav>
-
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <!-- Use descriptive alt text for accessibility -->
+          <img src="assets/images/bilben.png" alt="Ben's Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- This is the one and only theme toggle button with a unique ID -->
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -38,6 +42,7 @@
     <p>Try out interactive components and see them in action.</p>
 
     <section class="demo-grid">
+      <!-- Each demo card can have a unique data-aos-delay for a staggered animation -->
       <div class="demo-card" data-aos="fade-up">
         <h3>Neon Button</h3>
         <button class="neon-btn">Click Me</button>
@@ -50,11 +55,12 @@
 
       <div class="demo-card" data-aos="fade-up" data-aos-delay="200">
         <h3>Theme Toggle</h3>
-        <button id="theme-toggle" class="neon-btn">Toggle Theme</button>
+        <!-- This button should NOT have the same ID as the nav toggle -->
+        <button class="neon-btn">Toggle Theme</button>
       </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal HTML structure -->
     <div id="modal" class="modal hidden">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -67,6 +73,40 @@
     <p>&copy; 2025 Ben’s Tech Hub. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts are loaded at the end of the body for better performance -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS after the library is loaded
+    AOS.init();
+
+    // Basic modal functionality
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    // A simple theme toggle script that you can use
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check local storage for a saved theme preference
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggle.textContent = '☀️';
+    }
+
+    // Add click event listener to the toggle button
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
+
 </body>
 </html>
