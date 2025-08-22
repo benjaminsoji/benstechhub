@@ -4,32 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Toolkit | Ben's Tech Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Links to all necessary CSS files -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="theme.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <script src="script.js" defer></script>
 </head>
 <body>
- <!-- navbar.html -->
-<nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/bilben.png" alt="Ben's Logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="toolkit.html">Toolkit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button id="theme-toggle">🌙</button></li>
-  </ul>
-</nav>
-
+  <!-- The navigation is now correctly placed inside the body -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/bilben.png" alt="Ben's Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
 
   <header class="page-header" data-aos="fade-down">
     <h1>🧰 Toolkit</h1>
@@ -71,5 +73,12 @@
   <footer>
     <p>© 2025 Ben's Tech Hub</p>
   </footer>
+
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS after the library is loaded
+    AOS.init();
+  </script>
 </body>
 </html>
