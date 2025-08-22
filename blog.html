@@ -3,50 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Ben’s Tech Hub</title>
+  <title>Blog | Ben's Tech Hub</title>
+  <!-- Link to external CSS files for styling -->
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="layout.css" />
   <link rel="stylesheet" href="components.css" />
   <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
+
+  <!-- The header contains the main site title, logo, and primary navigation -->
   <header>
-    <h1>Ben’s Tech Hub</h1>
-    <nav>
-      <ul>
+    <h1>Ben's Tech Hub</h1>
+    <nav class="primary-nav">
+      <div class="logo">
+        <a href="index.html">
+          <!-- Use descriptive alt text for accessibility -->
+          <img src="assets/images/bilben.png" alt="Ben's Tech Hub Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="demo.html">Demo</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- Theme toggle button -->
+        <li><button id="theme-toggle">🌙</button></li>
       </ul>
     </nav>
-  
-  <nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/bilben.png" alt="Ben's Logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="toolkit.html">Toolkit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button id="theme-toggle">🌙</button></li>
-  </ul>
-</nav>
   </header>
 
-
+  <!-- Main content of the blog page -->
   <main>
     <h2>Tech Blog</h2>
     <p>Read insights, updates, and behind-the-scenes stories.</p>
 
-    <!-- Filter Controls -->
+    <!-- Filter and search controls -->
     <section class="blog-controls">
       <input type="text" id="searchInput" placeholder="Search blog..." />
       <select id="categoryFilter">
@@ -57,12 +53,12 @@
       </select>
     </section>
 
-    <!-- Blog Posts -->
+    <!-- This section will be populated with blog posts by JavaScript -->
     <section class="blog-grid" id="blogGrid">
-      <!-- Posts will be injected here -->
+      <!-- Blog posts will be dynamically inserted here -->
     </section>
 
-    <!-- Pagination -->
+    <!-- Pagination controls -->
     <div class="pagination">
       <button id="prevPage">← Previous</button>
       <span id="pageIndicator">Page 1</span>
@@ -70,11 +66,14 @@
     </div>
   </main>
 
+  <!-- Site footer -->
   <footer>
-    <p>&copy; 2025 Ben’s Tech Hub. All rights reserved.</p>
+    <p>&copy; 2025 Ben's Tech Hub. All rights reserved.</p>
   </footer>
 
+  <!-- Link to JavaScript files for dynamic functionality -->
   <script src="script.js"></script>
   <script src="blog.js"></script>
+
 </body>
 </html>
