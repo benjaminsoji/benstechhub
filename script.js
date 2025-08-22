@@ -1,32 +1,36 @@
-// Theme Toggle
+// === Theme Toggle ===
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Load saved theme
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
+  body.classList.remove('light', 'dark');
   body.classList.add(savedTheme);
+  themeToggle.textContent = savedTheme === 'light' ? '☀️' : '🌙';
 }
 
-// Toggle theme
 themeToggle?.addEventListener('click', () => {
-  body.classList.toggle('light');
-  const currentTheme = body.classList.contains('light') ? 'light' : '';
-  localStorage.setItem('theme', currentTheme);
+  const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+  body.classList.remove('light', 'dark');
+  body.classList.add(newTheme);
+  themeToggle.textContent = newTheme === 'light' ? '☀️' : '🌙';
+  localStorage.setItem('theme', newTheme);
 });
 
-// Modal logic
+// === Modal Logic ===
 function openModal() {
-  document.getElementById('modal').classList.remove('hidden');
+  const modal = document.getElementById('modal');
+  if (modal) modal.classList.remove('hidden');
 }
 
 function closeModal() {
-  document.getElementById('modal').classList.add('hidden');
+  const modal = document.getElementById('modal');
+  if (modal) modal.classList.add('hidden');
 }
 
-// AOS Initialization
+// === AOS Initialization ===
 document.addEventListener('DOMContentLoaded', () => {
-  AOS.init({
+  AOS?.init({
     duration: 800,
     once: true,
   });
