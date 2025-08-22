@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Videos | Ben's Tech Hub</title>
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="layout.css" />
-  <link rel="stylesheet" href="components.css" />
-  <link rel="stylesheet" href="theme.css" />
-  <link rel="stylesheet" href="videos.css" />
-  <!-- navbar.html -->
-<nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/bilben.png" alt="Ben's Logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="toolkit.html">Toolkit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button id="theme-toggle">🌙</button></li>
-  </ul>
-</nav>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos | Ben's Tech Hub</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="videos.css" />
 </head>
 
+<body>
+    <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/bilben.png" alt="Ben's Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="video-gallery">
-      <div class="container">
-        <h2>All Tutorials</h2>
-        <div class="video-row">
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" allowfullscreen></iframe>
-            <p>Video 4</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" allowfullscreen></iframe>
-            <p>Video 5</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" allowfullscreen></iframe>
-            <p>Video 6</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main>
+    <section class="video-gallery">
+      <div class="container">
+        <h2>All Tutorials</h2>
+        <div class="video-row">
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" allowfullscreen></iframe>
+            <p>Video 4</p>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" allowfullscreen></iframe>
+            <p>Video 5</p>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" allowfullscreen></iframe>
+            <p>Video 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Ben's Tech Hub</p>
-  </footer>
+  <footer>
+    <p>&copy; 2025 Ben's Tech Hub</p>
+  </footer>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light');
-      toggle.textContent = '☀️';
-    }
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggle.textContent = '☀️';
+    }
 
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('light');
-      const isLight = body.classList.contains('light');
-      toggle.textContent = isLight ? '☀️' : '🌙';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
-  </script>
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
