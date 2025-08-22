@@ -12,66 +12,73 @@
 </head>
 
 <body>
-    <nav>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/bilben.png" alt="Ben's Logo" />
-      </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="demo.html">Demo</a></li>
-      <li><a href="toolkit.html">Toolkit</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><button id="theme-toggle">🌙</button></li>
-    </ul>
-  </nav>
+  <!-- Header can be used for the page title or other introductory content -->
+  <header class="page-header">
+    <h1>All Tutorials</h1>
+    <p>Watch and learn with my video tutorials.</p>
+  </header>
+  
+  <!-- The navigation is now correctly placed after the header -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/bilben.png" alt="Ben's Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="video-gallery">
-      <div class="container">
-        <h2>All Tutorials</h2>
-        <div class="video-row">
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" allowfullscreen></iframe>
-            <p>Video 4</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" allowfullscreen></iframe>
-            <p>Video 5</p>
-          </div>
-          <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" allowfullscreen></iframe>
-            <p>Video 6</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main>
+    <section class="video-gallery">
+      <div class="container">
+        <!-- Main content heading is now inside the main tag -->
+        <div class="video-row">
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/ae-gOKCtzBQ" title="Video 4" allowfullscreen></iframe>
+            <p>Video 4</p>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/c80P3AGZKL0" title="Video 5" allowfullscreen></iframe>
+            <p>Video 5</p>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/Vwkn9d_bxQ4" title="Video 6" allowfullscreen></iframe>
+            <p>Video 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Ben's Tech Hub</p>
-  </footer>
+  <footer>
+    <p>&copy; 2025 Ben's Tech Hub</p>
+  </footer>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light');
-      toggle.textContent = '☀️';
-    }
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggle.textContent = '☀️';
+    }
 
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('light');
-      const isLight = body.classList.contains('light');
-      toggle.textContent = isLight ? '☀️' : '🌙';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
-  </script>
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
