@@ -1,0 +1,31 @@
+/* === Blog Post Page Styles === */
+.blog-post-full {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--neon-glow);
+}
+
+.featured-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--neon-glow);
+  margin: 1rem 0;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.related-posts {
+  margin-top: 3rem;
+}
+
+.related-posts h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
