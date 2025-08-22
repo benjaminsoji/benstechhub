@@ -24,21 +24,33 @@ const blogPosts = [
 let currentPage = 1;
 const postsPerPage = 2;
 
-function renderPosts() {
-  const grid = document.getElementById("blogGrid");
-  const search = document.getElementById("searchInput").value.toLowerCase();
-  const category = document.getElementById("categoryFilter").value;
+const grid = document.getElementById("blogGrid");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const prevPageBtn = document.getElementById("prevPage");
+const nextPageBtn = document.getElementById("nextPage");
+const pageIndicator = document.getElementById("pageIndicator");
 
-  const filtered = blogPosts.filter(post => {
+// Refactored to get a single filtered list.
+// The filtering logic is now in one place.
+function getFilteredPosts() {
+  const search = searchInput.value.toLowerCase();
+  const category = categoryFilter.value;
+
+  return blogPosts.filter(post => {
     const matchesCategory = category === "all" || post.category === category;
     const matchesSearch = post.title.toLowerCase().includes(search) || post.excerpt.toLowerCase().includes(search);
     return matchesCategory && matchesSearch;
   });
+}
 
+function renderPosts() {
+  const filteredPosts = getFilteredPosts();
   const start = (currentPage - 1) * postsPerPage;
-  const paginated = filtered.slice(start, start + postsPerPage);
+  const paginatedPosts = filteredPosts.slice(start, start + postsPerPage);
 
-  grid.innerHTML = paginated.map(post => `
+  // Generate and insert the HTML
+  grid.innerHTML = paginatedPosts.map(post => `
     <article class="blog-post" data-aos="fade-up">
       <h3>${post.title}</h3>
       <p>${post.excerpt}</p>
@@ -46,40 +58,57 @@ function renderPosts() {
     </article>
   `).join("");
 
-  document.getElementById("pageIndicator").textContent = `Page ${currentPage}`;
+  pageIndicator.textContent = `Page ${currentPage}`;
+  updatePaginationButtons(filteredPosts.length);
 }
 
-document.getElementById("searchInput").addEventListener("input", () => {
+// New function to handle button states for better UX
+function updatePaginationButtons(totalPosts) {
+  const maxPage = Math.ceil(totalPosts / postsPerPage);
+
+  if (currentPage === 1) {
+    prevPageBtn.disabled = true;
+    prevPageBtn.style.opacity = 0.5; // Visual cue
+  } else {
+    prevPageBtn.disabled = false;
+    prevPageBtn.style.opacity = 1;
+  }
+
+  if (currentPage === maxPage || totalPosts === 0) {
+    nextPageBtn.disabled = true;
+    nextPageBtn.style.opacity = 0.5; // Visual cue
+  } else {
+    nextPageBtn.disabled = false;
+    nextPageBtn.style.opacity = 1;
+  }
+}
+
+// Event listeners call renderPosts directly after resetting the page number
+searchInput.addEventListener("input", () => {
   currentPage = 1;
   renderPosts();
 });
 
-document.getElementById("categoryFilter").addEventListener("change", () => {
+categoryFilter.addEventListener("change", () => {
   currentPage = 1;
   renderPosts();
 });
 
-document.getElementById("prevPage").addEventListener("click", () => {
+prevPageBtn.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
     renderPosts();
   }
 });
 
-document.getElementById("nextPage").addEventListener("click", () => {
-  const search = document.getElementById("searchInput").value.toLowerCase();
-  const category = document.getElementById("categoryFilter").value;
-  const filtered = blogPosts.filter(post => {
-    const matchesCategory = category === "all" || post.category === category;
-    const matchesSearch = post.title.toLowerCase().includes(search) || post.excerpt.toLowerCase().includes(search);
-    return matchesCategory && matchesSearch;
-  });
-
-  const maxPage = Math.ceil(filtered.length / postsPerPage);
+nextPageBtn.addEventListener("click", () => {
+  const filteredPosts = getFilteredPosts();
+  const maxPage = Math.ceil(filteredPosts.length / postsPerPage);
   if (currentPage < maxPage) {
     currentPage++;
     renderPosts();
   }
 });
 
+// Initial render on page load
 document.addEventListener("DOMContentLoaded", renderPosts);
