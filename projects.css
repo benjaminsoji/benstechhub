@@ -1,0 +1,31 @@
+/* === Projects Page Styles === */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--neon-glow);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
