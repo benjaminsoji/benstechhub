@@ -4,37 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Ben's Tech Hub</title>
+  <!-- Link to external CSS files -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <script src="script.js" defer></script>
+</head>
 <body>
- <nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/bilben.png" alt="Ben's Logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="toolkit.html">Toolkit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button id="theme-toggle">🌙</button></li>
-  </ul>
-</nav>
-  </head>
 
+  <!-- The primary navigation is now correctly placed at the beginning of the body -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/bilben.png" alt="Ben's Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="toolkit.html">Toolkit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
 
+  <!-- The header for the contact page -->
   <header class="page-header" data-aos="fade-down">
     <h1>📬 Contact</h1>
     <p>Questions, feedback, or collaboration ideas? Let’s connect.</p>
   </header>
 
+  <!-- Main content area with the contact form -->
   <main class="contact-container" data-aos="fade-up">
     <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
       <label for="name">Name</label>
@@ -50,8 +53,18 @@
     </form>
   </main>
 
+  <!-- Site footer -->
   <footer>
     <p>© 2025 Ben's Tech Hub</p>
   </footer>
+
+  <!-- Scripts are placed at the end of the body for better performance -->
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS after it's loaded
+    AOS.init();
+  </script>
+
 </body>
 </html>
